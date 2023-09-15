@@ -69,6 +69,9 @@ address {
 .semibold{
     font-weight: 600;
 }
+.bold{
+    font-weight: 700;
+}
 .text-center{
     text-align: center;
 }
@@ -175,6 +178,12 @@ nav {
 }
 
 /* ============ FAQS ========= */
+.faqs{
+    background-image: url(../images/islam-bg.png);
+    background-repeat: no-repeat;
+    background-position: center -10px;
+    background-size: 500px
+}
 
 .faqs-wrapper {
 padding: 50px 0 60px;
@@ -347,10 +356,14 @@ padding: 50px 0 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 30px;
   }
   .faqs-wrapper > * {
-    flex-basis: 45%;
+    flex-basis: 47%;
+  }
+  .faq__item{
+    margin: 0;
   }
   .accordion {
     font-size: 18px;
@@ -367,8 +380,9 @@ padding: 50px 0 60px;
     padding-bottom: 20px;
   }
   .footer-info {
-    gap: 70px;
+    gap: 50px;
     align-self: flex-end;
+    justify-content: space-between;
     padding-bottom: 20px;
   }
   .footer-logo {
