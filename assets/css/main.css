@@ -1,0 +1,358 @@
+:root {
+  --color-black: #213441;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 0.875rem;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--color-black);
+  background-color: #f3f3f3;
+  line-height: 1.3;
+  size-adjust: 100%;
+}
+body {
+  letter-spacing: 0.5px;
+}
+h1 {
+  margin: 0;
+  text-align: center;
+}
+h2 {
+  font-size: 2.125rem;
+  font-size: clamp(2.125rem, 1.3768rem + 2.3944vw, 4.25rem);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+}
+h3 {
+  font-size: 1.375rem;
+  font-size: clamp(1.375rem, 0.7766rem + 1.9149vw, 2.5rem);
+  text-align: center;
+}
+h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-size: clamp(0.875rem, 0.748rem + 0.4065vw, 1rem);
+}
+p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+address {
+  font-style: normal;
+}
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* ============ Navbar ========= */
+header {
+  width: 100%;
+  background-color: #101528;
+}
+
+nav {
+  padding: 38px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-nav {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 120px;
+  list-style: none;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  transition: all 0.4s;
+  z-index: 2;
+  gap: 10px;
+  min-height: 100vh;
+  justify-content: center;
+}
+.main-nav.active {
+  left: 0;
+  background-color: rgb(16, 20, 40, 0.95);
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+.main-nav a {
+  font-size: 0.875rem;
+  display: inline-block;
+  margin: 16px 32px;
+  text-decoration: none;
+}
+
+.logo {
+  position: relative;
+  z-index: 3;
+}
+.logo a {
+  margin: 0;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 1px;
+  margin-bottom: 4px;
+}
+
+.hamburger {
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  -webkit-transform: translateY(6px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.bar:last-child {
+  margin-bottom: 0;
+}
+
+/* ============ FAQS ========= */
+
+.faqs {
+  padding: 60px 0;
+}
+
+.faq__item {
+  margin: 0 20px;
+}
+.accordion {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding: 14px 40px;
+  padding-left: 50px;
+  border-radius: 10px;
+  margin: 0;
+  transition: 0.4s;
+  background-color: white;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.accordion::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background-image: url("../images/faq-icon.png");
+  background-size: contain;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  padding-right: 2.5em;
+  width: 1.3em;
+  height: 1.3em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.accordion:after {
+  content: url("../images/plus-icon.svg");
+  float: right;
+  margin-left: 14px;
+  position: absolute;
+  right: 20px;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion.active:after {
+  content: url("../images/minus.svg");
+  transition: all 0.5s;
+}
+
+.panel {
+  font-weight: 500;
+  padding: 0 15px;
+  margin: 10px 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* ========== Footer ======== */
+.footer {
+  color: white;
+  font-size: 12px;
+  background-image: linear-gradient(180deg, #122634 7.92%, #223542 100%);
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 60px 0 50px;
+}
+.footer-nav-item {
+  min-width: 50px;
+}
+.footer-nav-item p {
+  font-size: 12px;
+  font-weight: bold;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer-social img {
+  border-radius: 5px;
+}
+.footer-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  line-height: 1.7;
+}
+.footer-logo {
+  padding-bottom: 50px;
+  text-align: center;
+  padding-top: 48px;
+}
+
+@media (min-width: 992px) {
+  p {
+    font-size: 0.875rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ========== Navbar ========== */
+  .hamburger {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    position: static;
+    flex-direction: revert;
+    padding: 0;
+    min-height: auto;
+    box-shadow: none;
+    width: auto;
+  }
+  .main-nav.active {
+    background-color: transparent;
+  }
+  .wrapper {
+    background-size: 45%;
+    background-position: 90% center;
+  }
+  .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .hero {
+    background-position: 90% center;
+  }
+  .logo {
+    flex-basis: auto;
+    margin: 0;
+    margin-right: auto;
+  }
+  .main-nav a {
+    margin: 0 32px;
+  }
+  .main-nav li:last-child a {
+    margin-right: 0;
+  }
+
+  /* ============ FAQS ========= */
+  .faqs {
+    padding: 80px 0;
+  }
+  .faqs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .faqs-wrapper > * {
+    flex-basis: 45%;
+  }
+  .accordion {
+    font-size: 18px;
+  }
+  .panel {
+    padding: 0 30px;
+  }
+  /* =========== Footer ========= */
+  .footer-links {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .footer-nav {
+    padding-bottom: 20px;
+  }
+  .footer-info {
+    gap: 70px;
+    align-self: flex-end;
+    padding-bottom: 20px;
+  }
+  .footer-logo {
+    padding-top: 18px;
+    padding-bottom: 20px;
+  }
+}
