@@ -16,7 +16,7 @@ body {
 }
 
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   color: var(--color-black);
   background-color: #f3f3f3;
@@ -66,27 +66,27 @@ img {
 address {
   font-style: normal;
 }
-.semibold{
-    font-weight: 600;
+.semibold {
+  font-weight: 600;
 }
-.bold{
-    font-weight: 700;
+.bold {
+  font-weight: 700;
 }
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
 .tagline {
-    font-size: 1rem;
-    font-size: clamp(1rem, 0.6039rem + 1.2676vw, 2.125rem);
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 0;
-    padding-top: 4em;
-    letter-spacing: -1px;
-  }
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.6039rem + 1.2676vw, 2.125rem);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 4em;
+  letter-spacing: -1px;
+}
 .container {
   padding-left: 5%;
   padding-right: 5%;
@@ -97,7 +97,7 @@ address {
 /* ============ Navbar ========= */
 header {
   width: 100%;
-  background-color: #101528;
+  background-color: #11202f;
 }
 
 nav {
@@ -125,7 +125,7 @@ nav {
 }
 .main-nav.active {
   left: 0;
-  background-color: rgb(16, 20, 40, 0.95);
+  background-color: #11202f;
   box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 }
 .main-nav a {
@@ -133,6 +133,11 @@ nav {
   display: inline-block;
   margin: 16px 32px;
   text-decoration: none;
+}
+.login-link{
+  margin-left: auto;
+  margin-right: 20px;
+  z-index: 3;
 }
 
 .logo {
@@ -178,20 +183,20 @@ nav {
 }
 
 /* ============ FAQS ========= */
-.faqs{
-    background-image: url(../images/islam-bg.png);
-    background-repeat: no-repeat;
-    background-position: center -10px;
-    background-size: 500px
+.faqs {
+  background-image: url(../images/islam-bg.png);
+  background-repeat: no-repeat;
+  background-position: center -10px;
+  background-size: 500px;
 }
 
 .faqs-wrapper {
-padding: 50px 0 60px;
+  padding: 50px 0 60px;
 }
-.faqs__text{
-    text-align: center;
-    line-height: 2;
-    margin-bottom: 2em;
+.faqs__text {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 2em;
 }
 .faq__item {
   margin: 0 20px;
@@ -214,10 +219,10 @@ padding: 50px 0 60px;
   -webkit-tap-highlight-color: transparent;
 }
 .accordion::before {
-  content: "";
+  content: '';
   position: relative;
   display: inline-block;
-  background-image: url("../images/faq-icon.png");
+  background-image: url('../images/faq-icon.png');
   background-size: contain;
   vertical-align: middle;
   background-repeat: no-repeat;
@@ -231,7 +236,7 @@ padding: 50px 0 60px;
 }
 
 .accordion:after {
-  content: url("../images/plus-icon.svg");
+  content: url('../images/plus-icon.svg');
   float: right;
   margin-left: 14px;
   position: absolute;
@@ -242,7 +247,7 @@ padding: 50px 0 60px;
 }
 
 .accordion.active:after {
-  content: url("../images/minus.svg");
+  content: url('../images/minus.svg');
   transition: all 0.5s;
 }
 
@@ -273,6 +278,7 @@ padding: 50px 0 60px;
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 60px 0 50px;
 }
@@ -295,12 +301,16 @@ padding: 50px 0 60px;
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: center;
   line-height: 1.7;
 }
 .footer-logo {
   padding-bottom: 50px;
   text-align: center;
   padding-top: 48px;
+}
+.footer-logo__image {
+  margin: 20px 0;
 }
 
 @media (min-width: 992px) {
@@ -344,7 +354,7 @@ padding: 50px 0 60px;
     margin-right: auto;
   }
   .main-nav a {
-    margin: 0 32px;
+    margin: 0 10px;
   }
   .main-nav li:last-child a {
     margin-right: 0;
@@ -362,7 +372,7 @@ padding: 50px 0 60px;
   .faqs-wrapper > * {
     flex-basis: 47%;
   }
-  .faq__item{
+  .faq__item {
     margin: 0;
   }
   .accordion {
@@ -376,8 +386,10 @@ padding: 50px 0 60px;
   .footer-links {
     flex-direction: row;
     justify-content: space-evenly;
+    padding-top: 60px;
   }
   .footer-nav {
+    padding-top: 0;
     padding-bottom: 20px;
   }
   .footer-info {
