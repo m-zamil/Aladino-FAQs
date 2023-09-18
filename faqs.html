@@ -6,10 +6,11 @@
     <title>Aladino FAQs</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <header>
@@ -205,9 +206,10 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer-links">
+         <div>
           <div class="footer-nav">
             <div class="footer-nav-item">
               <a href="/#about">About Us</a>
@@ -231,65 +233,22 @@
               <a href="/#team">Team</a>
             </div>
             <div class="footer-nav-item">
-              <a href="#faqs">FAQs</a>
-            </div>
-          </div>
-          <div class="footer-info">
-            <address>
-              <span class="bold">Contact:</span>
-              <a href="mailto:email@aladino.com">email@aladino.com</a>
-            </address>
-          </div>
-        </div>
-        <div class="footer-logo">
-          <img class="footer-logo__image" src="./assets/images/logo.svg" width="170" alt="" />
-          <div>All rights reserved. 2023</div>
-        </div>
-      </div>
-    </footer> -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-links">
-         <div>
-          <div class="footer-nav">
-            <div class="footer-nav-item">
-              <a href="#about">About Us</a>
-            </div>
-            <div class="footer-nav-item">
-              <a href="#market">Market</a>
-            </div>
-            <div class="footer-nav-item">
-              <a href="#club">Club</a>
-            </div>
-            <div class="footer-nav-item">
-              <a href="#client">Client</a>
-            </div>
-            <div class="footer-nav-item">
-              <a href="#concept">Concept</a>
-            </div>
-            <div class="footer-nav-item">
-              <a href="#howtostart">How to start</a>
-            </div>
-            <div class="footer-nav-item">
-              <a href="#team">Team</a>
-            </div>
-            <div class="footer-nav-item">
-              <a href="/FAQ">FAQs</a>
+              <a href="#">FAQs</a>
             </div>
           </div>
           <div class="footer-nav footer-links--new">
            
               <div class="footer-nav-item">
-                <a class="tooltip"> Distributors Terms and conditions <span class="tooltiptext">Will be published before sales start</span> </a>
+                <a data-tooltip="Will be published before sales start" data-flow="top">Distributors Terms and conditions</a>
               </div>
               <div class="footer-nav-item">
-                <a class="tooltip"> Distributors  playbook <span class="tooltiptext">Will be published before sales start</span> </a>
+                <a data-tooltip="Will be published before sales start" data-flow="top"> Distributors  playbook </a>
               </div>
               <div class="footer-nav-item">
-                <a class="tooltip"> Polices and procedure <span class="tooltiptext">Will be published before sales start</span> </a>
+                <a data-tooltip="Will be published before sales start" data-flow="top"> Polices and procedure </a>
               </div>
               <div class="footer-nav-item">
-                <a class="tooltip"> Customer general agreement <span class="tooltiptext">Will be published before sales start</span> </a>
+                <a data-tooltip="Will be published before sales start" data-flow="top"> Customer general agreement </a>
               </div>
               <div class="footer-nav-item">
                 <a href="./assets/Pitch-desk.pdf">Pitch desk</a>
@@ -297,16 +256,14 @@
           
           </div>
          </div>
-         <div class="footer-social" style="
-    /* justify-content: center; */
-">
-          <a class="tooltip">
-            <img src="./assets/images/telegram-icon.png" width="50" alt="">
-            <span class="tooltiptext">Available a week before sales start</span>
+         <div class="footer-social">
+          <a data-tooltip="Available a week before sales start" data-flow="top">
+            <img src="./assets/images/telegram-icon.png" width="50" height="50" alt="">
+            
           </a>
-          <a class="tooltip">
-            <img src="./assets/images/git-icon.png" width="50" alt="">
-            <span class="tooltiptext">Available a week before sales start</span>
+          <a data-tooltip="Available a week before sales start" data-flow="top">
+            <img src="./assets/images/git-icon.png" width="50" height="50" alt="">
+            
           </a>
          </div>
           <div class="footer-info">
@@ -316,8 +273,8 @@
                   Lorem Upsum 27, New York <br>
                   <span class="bold">Aladino Holding MK</span> <br>
                   Lorem Upsum 27, New York <br> <br>
-              <span class="bold">Contact:</span> <br>
-              <a href="mailto:support@aladino.io">support@aladino.com</a>
+                  <span class="bold">Contact:</span> <br>
+                  <a href="mailto:support@aladino.io">support@aladino.com</a>
             </address>
           </div>
         </div>
