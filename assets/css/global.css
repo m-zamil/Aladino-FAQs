@@ -229,6 +229,8 @@ nav {
   text-align: center;
   align-items: center;
   line-height: 1.7;
+  flex-direction: column;
+  margin-top: 40px;
 }
 .footer-logo {
   padding-bottom: 50px;
@@ -429,7 +431,7 @@ nav {
     padding-top: 60px;
   }
   .footer-nav-wrapper {
-    flex: 2;
+    flex: 1;
   }
   .footer-social {
     padding-top: 0;
@@ -444,8 +446,11 @@ nav {
     flex: 1;
     gap: 70px;
     align-self: center;
+    align-items: flex-start;
     text-align: left;
     padding-bottom: 20px;
+    flex-direction: row;
+    margin-top: 0;
   }
   .footer-logo {
     padding-top: 18px;
